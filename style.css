@@ -55,3 +55,46 @@ body {
     color: black;
     box-shadow: 0 0 20px #00ff00;
 }
+/* صفحة تسجيل الدخول */
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    width: 300px;
+}
+
+.bloody-title {
+    font-size: 45px;
+    color: red;
+    text-shadow: 0 0 10px red, 0 0 20px darkred;
+    margin-bottom: 25px;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-box label {
+    color: #00ff00;
+    text-align: left;
+    font-size: 14px;
+}
+
+.login-box input {
+    padding: 10px;
+    background: black;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    outline: none;
+}
+
+.error-msg {
+    color: red;
+    margin-top: 10px;
+    height: 20px;
+}
