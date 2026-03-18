@@ -109,3 +109,13 @@ if (verifyBtn) {
         window.location.href = zone + ".html";
     });
 }
+/* زر تسجيل الخروج */
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+        localStorage.removeItem("currentUser");
+        localStorage.removeItem("currentZone");
+        window.location.href = "login.html";
+    });
+}
