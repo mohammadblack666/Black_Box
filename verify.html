@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDENTITY VERIFICATION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="matrixCanvas"></canvas>
+
+    <div class="verify-container">
+        <h1 class="verify-title">IDENTITY VERIFICATION</h1>
+
+        <div class="verify-box">
+
+            <label>Where are you from? (Required)</label>
+            <input type="text" id="q1">
+
+            <label>How did you get here? (Optional)</label>
+            <input type="text" id="q2">
+
+            <label>Who sent you? (Optional)</label>
+            <input type="text" id="q3">
+
+            <button id="verifyBtn" class="enter-button">ENTER</button>
+
+            <p id="verifyError" class="error-msg"></p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
