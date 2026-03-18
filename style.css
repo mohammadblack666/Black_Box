@@ -173,3 +173,13 @@ body {
     color: #ffff00;
     font-weight: bold;
 }
+/* ألوان خاصة بـ ZONE 3 */
+.zone3-color {
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.red {
+    color: #ff0000;
+    font-weight: bold;
+}
