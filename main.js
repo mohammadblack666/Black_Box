@@ -72,3 +72,40 @@ if (loginBtn) {
         window.location.href = "verify.html";
     });
 }
+/* صفحة التحقق */
+const verifyBtn = document.getElementById("verifyBtn");
+
+if (verifyBtn) {
+    verifyBtn.addEventListener("click", () => {
+        const q1 = document.getElementById("q1").value.trim();
+        const q2 = document.getElementById("q2").value.trim();
+        const q3 = document.getElementById("q3").value.trim();
+        const error = document.getElementById("verifyError");
+
+        if (q1 === "") {
+            error.textContent = "This field is required";
+            return;
+        }
+
+        // حفظ المعلومات
+        const user = localStorage.getItem("currentUser");
+        const zone = localStorage.getItem("currentZone");
+
+        const logEntry = {
+            user: user,
+            zone: zone,
+            from: q1,
+            how: q2,
+            sent: q3,
+            time: new Date().toLocaleString()
+        };
+
+        // تخزين السجلات
+        let logs = JSON.parse(localStorage.getItem("logs") || "[]");
+        logs.push(logEntry);
+        localStorage.setItem("logs", JSON.stringify(logs));
+
+        // الانتقال للمنطقة الخاصة
+        window.location.href = zone + ".html";
+    });
+}
