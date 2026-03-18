@@ -135,3 +135,31 @@ body {
     color: #00ff00;
     outline: none;
 }
+/* صفحة المناطق السرّية */
+.zone-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    width: 400px;
+}
+
+.zone-title {
+    font-size: 35px;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+    margin-bottom: 20px;
+}
+
+.zone-text {
+    color: #00ff00;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.green {
+    color: #00ff00;
+    font-weight: bold;
+}
