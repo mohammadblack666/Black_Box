@@ -183,3 +183,40 @@ body {
     color: #ff0000;
     font-weight: bold;
 }
+/* صفحة الأدمن */
+.admin-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    width: 600px;
+}
+
+.admin-title {
+    font-size: 35px;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+    margin-bottom: 25px;
+}
+
+.logs-box {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    height: 300px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.red-btn {
+    border-color: red;
+    color: red;
+}
+
+.red-btn:hover {
+    background: red;
+    color: black;
+}
