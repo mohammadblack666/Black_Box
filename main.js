@@ -44,3 +44,31 @@ document.getElementById("enterBtn").addEventListener("click", () => {
         window.location.href = "login.html";
     }, 800);
 });
+/* تسجيل الدخول */
+const loginBtn = document.getElementById("loginBtn");
+
+if (loginBtn) {
+    loginBtn.addEventListener("click", () => {
+        const user = document.getElementById("username").value.trim();
+        const pass = document.getElementById("password").value.trim();
+        const errorMsg = document.getElementById("errorMsg");
+
+        const validUsers = {
+            "black": "zone1",
+            "black666": "zone2",
+            "black_box666": "zone3"
+        };
+
+        if (pass !== "159654black" || !validUsers[user]) {
+            errorMsg.textContent = "ACCESS DENIED";
+            return;
+        }
+
+        // حفظ اليوزر للصفحة التالية
+        localStorage.setItem("currentUser", user);
+        localStorage.setItem("currentZone", validUsers[user]);
+
+        // الانتقال لصفحة الأسئلة
+        window.location.href = "verify.html";
+    });
+}
