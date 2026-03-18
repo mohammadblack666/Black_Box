@@ -1,0 +1,57 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    background: black;
+    overflow: hidden;
+}
+
+/* خلفية الماتريكس */
+#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* شاشة البداية */
+.intro-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.intro-title {
+    color: #00ff00;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+/* زر الدخول */
+.enter-button {
+    padding: 12px 30px;
+    font-size: 20px;
+    background: transparent;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+.enter-button:hover {
+    background: #00ff00;
+    color: black;
+    box-shadow: 0 0 20px #00ff00;
+}
