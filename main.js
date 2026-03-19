@@ -35,15 +35,6 @@ function drawMatrix() {
 
 setInterval(drawMatrix, 40);
 
-/* زر الدخول */
-document.getElementById("enterBtn").addEventListener("click", () => {
-    // تأثير بسيط قبل الانتقال
-    document.querySelector(".intro-container").style.opacity = "0";
-
-    setTimeout(() => {
-        window.location.href = "login.html";
-    }, 800);
-});
 /* تسجيل الدخول */
 const loginBtn = document.getElementById("loginBtn");
 
@@ -64,14 +55,13 @@ if (loginBtn) {
             return;
         }
 
-        // حفظ اليوزر للصفحة التالية
         localStorage.setItem("currentUser", user);
         localStorage.setItem("currentZone", validUsers[user]);
 
-        // الانتقال لصفحة الأسئلة
         window.location.href = "verify.html";
     });
 }
+
 /* صفحة التحقق */
 const verifyBtn = document.getElementById("verifyBtn");
 
@@ -87,7 +77,6 @@ if (verifyBtn) {
             return;
         }
 
-        // حفظ المعلومات
         const user = localStorage.getItem("currentUser");
         const zone = localStorage.getItem("currentZone");
 
@@ -100,15 +89,14 @@ if (verifyBtn) {
             time: new Date().toLocaleString()
         };
 
-        // تخزين السجلات
         let logs = JSON.parse(localStorage.getItem("logs") || "[]");
         logs.push(logEntry);
         localStorage.setItem("logs", JSON.stringify(logs));
 
-        // الانتقال للمنطقة الخاصة
         window.location.href = zone + ".html";
     });
 }
+
 /* زر تسجيل الخروج */
 const logoutBtn = document.getElementById("logoutBtn");
 
