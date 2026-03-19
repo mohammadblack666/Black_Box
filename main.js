@@ -44,6 +44,16 @@ if (loginBtn) {
         const pass = document.getElementById("password").value.trim();
         const errorMsg = document.getElementById("errorMsg");
 
+// بيانات الأدمن
+const adminUser = "mohammad_black_box";
+const adminPass = "159645blackbox";
+
+// تسجيل دخول الأدمن
+if (user === adminUser && pass === adminPass) {
+    window.location.href = "admin.html";
+    return;
+}
+
         const validUsers = {
             "black": "zone1",
             "black666": "zone2",
